@@ -1,1 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SenhaSegura - Guilbert</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h2>🔐 SenhaSegura</h2>
+
+            <div>
+                <a href="#analisador">Analisador</a>
+                <a href="#matematica">Matemática</a>
+                <a href="#comparacao">Comparação</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="inicio">
+
+            <div>
+                <p class="pequeno">PROJETO DE TECNOLOGIA</p>
+
+                <h1>
+                    Sua senha é
+                    <span>segura?</span>
+                </h1>
+
+                <p>
+                    Aprenda como criar senhas mais resistentes
+                    utilizando HTML, CSS, JavaScript e matemática.
+                </p>
+
+                <a class="botao" href="#analisador">
+                    Testar uma senha
+                </a>
+            </div>
+
+            <div class="cadeado">
+                🔐
+            </div>
+
+        </section>
+
+
+        <section id="analisador" class="secao">
+
+            <p class="pequeno">01 — JAVASCRIPT</p>
+
+            <h2>Analisador de Senhas</h2>
+
+            <p class="descricao">
+                Digite uma senha fictícia e veja quais características
+                ela possui.
+            </p>
+
+            <div class="card">
+
+                <label for="password">
+                    Digite uma senha:
+                </label>
+
+                <div class="senha-input">
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Digite uma senha..."
+                    >
+
+                    <button id="mostrar">
+                        👁️
+                    </button>
+
+                </div>
+
+
+                <div class="forca">
+
+                    <div>
+                        <span>Força da senha:</span>
+                        <strong id="textoForca">
+                            Digite uma senha
+                        </strong>
+                    </div>
+
+                    <div class="barra">
+                        <div id="barraForca"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="requisitos">
+
+                    <p id="tamanho">
+                        ○ Pelo menos 12 caracteres
+                    </p>
+
+                    <p id="maiuscula">
+                        ○ Letra maiúscula
+                    </p>
+
+                    <p id="minuscula">
+                        ○ Letra minúscula
+                    </p>
+
+                    <p id="numero">
+                        ○ Número
+                    </p>
+
+                    <p id="simbolo">
+                        ○ Símbolo especial
+                    </p>
+
+                </div>
+
+
+                <div id="resultado" class="resultado">
+                    Digite uma senha para começar.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="matematica" class="secao escura">
+
+            <p class="pequeno">02 — MATEMÁTICA</p>
+
+            <h2>A matemática das senhas</h2>
+
+            <p class="descricao">
+                Quanto maior for a quantidade de caracteres e combinações,
+                maior será o número de possibilidades.
+            </p>
+
+
+            <div class="cards">
+
+                <div class="card-info">
+
+                    <h3>📐 Fórmula</h3>
+
+                    <p>
+                        Podemos representar o número de combinações
+                        possíveis usando:
+                    </p>
+
+                    <div class="formula">
+                        N<sup>L</sup>
+                    </div>
+
+                    <p>
+                        N = quantidade de caracteres disponíveis
+                    </p>
+
+                    <p>
+                        L = tamanho da senha
+                    </p>
+
+                </div>
+
+
+                <div class="card-info">
+
+                    <h3>🔢 Exemplo</h3>
+
+                    <p>
+                        Se uma senha possui 8 posições e utiliza
+                        26 letras minúsculas:
+                    </p>
+
+                    <div class="formula">
+                        26<sup>8</sup>
+                    </div>
+
+                    <p>
+                        Isso representa mais de 200 bilhões
+                        de combinações possíveis.
+                    </p>
+
+                </div>
+
+
+                <div class="card-info">
+
+                    <h3>🛡️ Segurança</h3>
+
+                    <p>
+                        Adicionar letras maiúsculas, números,
+                        símbolos e aumentar o tamanho da senha
+                        aumenta o número de combinações possíveis.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="calculadora">
+
+                <h3>Calculadora de combinações</h3>
+
+                <p>
+                    Coloque os valores abaixo e veja uma estimativa.
+                </p>
+
+                <label>
+                    Quantidade de caracteres possíveis:
+                    <input type="number" id="caracteres" value="94">
+                </label>
+
+                <label>
+                    Tamanho da senha:
+                    <input type="number" id="tamanhoSenha" value="12">
+                </label>
+
+                <button class="botao" id="calcular">
+                    Calcular
+                </button>
+
+                <div id="resultadoCalculo" class="calculo">
+                    Resultado aparecerá aqui.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="comparacao" class="secao">
+
+            <p class="pequeno">03 — ANÁLISE CRÍTICA</p>
+
+            <h2>Comparação de senhas</h2>
+
+            <p class="descricao">
+                Observe a diferença entre uma senha previsível
+                e uma senha com maior variedade de caracteres.
+            </p>
+
+
+            <div class="comparacao">
+
+                <div class="senha-fraca">
+
+                    <h3>⚠️ Senha previsível</h3>
+
+                    <div class="exemplo">
+                        senha123
+                    </div>
+
+                    <ul>
+                        <li>É curta.</li>
+                        <li>Possui uma palavra comum.</li>
+                        <li>Possui uma sequência previsível.</li>
+                        <li>Pode ser mais fácil de adivinhar.</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="senha-forte">
+
+                    <h3>🛡️ Senha mais resistente</h3>
+
+                    <div class="exemplo">
+                        M7!qZ2#vLp9@Kx
+                    </div>
+
+                    <ul>
+                        <li>Possui mais caracteres.</li>
+                        <li>Combina letras maiúsculas e minúsculas.</li>
+                        <li>Possui números.</li>
+                        <li>Possui símbolos.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="secao sobre">
+
+            <p class="pequeno">04 — SOBRE O PROJETO</p>
+
+            <h2>O que foi utilizado?</h2>
+
+
+            <div class="cards">
+
+                <div class="card-info">
+                    <h3>HTML</h3>
+
+                    <p>
+                        Utilizado para criar a estrutura
+                        e o conteúdo do site.
+                    </p>
+                </div>
+
+
+                <div class="card-info">
+                    <h3>CSS</h3>
+
+                    <p>
+                        Utilizado para criar o visual,
+                        cores, organização e responsividade.
+                    </p>
+                </div>
+
+
+                <div class="card-info">
+                    <h3>JavaScript</h3>
+
+                    <p>
+                        Utilizado para criar a interação,
+                        analisar senhas e fazer cálculos.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="aluno">
+
+                <h3>👨‍💻 Trabalho escolar</h3>
+
+                <p>
+                    <strong>Aluno:</strong> Guilbert
+                </p>
+
+                <p>
+                    <strong>Turma:</strong> 3E
+                </p>
+
+                <p>
+                    <strong>Professora:</strong> Nadir
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            🔐 SenhaSegura — Projeto educacional
+        </p>
+
+        <p>
+            Guilbert • Turma 3E • Professora Nadir
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
