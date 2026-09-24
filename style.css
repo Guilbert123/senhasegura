@@ -1,1 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #07111f;
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(7, 17, 31, 0.95);
+    border-bottom: 1px solid #1e334d;
+}
+
+nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: #38bdf8;
+}
+
+nav div {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+.inicio {
+    max-width: 1100px;
+    min-height: 80vh;
+    margin: auto;
+    padding: 80px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.inicio h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1;
+    margin: 20px 0;
+}
+
+.inicio h1 span {
+    color: #38bdf8;
+}
+
+.inicio p {
+    color: #94a3b8;
+    max-width: 650px;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.pequeno {
+    color: #38bdf8 !important;
+    font-size: 0.8rem !important;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.cadeado {
+    width: 250px;
+    height: 250px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    font-size: 100px;
+
+    background: #102b45;
+    border: 2px solid #38bdf8;
+
+    box-shadow: 0 0 70px rgba(56, 189, 248, 0.2);
+}
+
+.botao {
+    display: inline-block;
+    border: none;
+    border-radius: 8px;
+
+    padding: 14px 22px;
+
+    background: #38bdf8;
+    color: #03111e;
+
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.botao:hover {
+    background: #7dd3fc;
+}
+
+.secao {
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 20px;
+}
+
+.secao h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.descricao {
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+.card {
+    max-width: 700px;
+    margin: auto;
+
+    background: #10233a;
+    border: 1px solid #1e334d;
+
+    padding: 35px;
+    border-radius: 15px;
+}
+
+.card label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.senha-input {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.senha-input input {
+    flex: 1;
+
+    padding: 15px;
+
+    background: #07111f;
+    border: 1px solid #334155;
+
+    color: white;
+
+    border-radius: 8px 0 0 8px;
+
+    font-size: 1rem;
+}
+
+.senha-input button {
+    width: 60px;
+    border: none;
+    background: #1e3a56;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+}
+
+.forca > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.barra {
+    height: 10px;
+    background: #07111f;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+#barraForca {
+    height: 100%;
+    width: 0%;
+    background: #ef4444;
+    transition: 0.3s;
+}
+
+.requisitos {
+    display: grid;
+    gap: 8px;
+    color: #94a3b8;
+}
+
+.requisitos p.ok {
+    color: #22c55e;
+}
+
+.resultado {
+    margin-top: 25px;
+    padding: 15px;
+
+    border-radius: 8px;
+
+    background: #07111f;
+    color: #94a3b8;
+}
+
+.escura {
+    max-width: none;
+    padding-left: max(20px, calc((100% - 1060px) / 2));
+    padding-right: max(20px, calc((100% - 1060px) / 2));
+
+    background: #0d1b2e;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card-info {
+    padding: 30px;
+
+    background: #10233a;
+    border: 1px solid #1e334d;
+
+    border-radius: 15px;
+}
+
+.card-info h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.card-info p {
+    color: #94a3b8;
+    margin-bottom: 10px;
+}
+
+.formula {
+    padding: 20px;
+    margin: 20px 0;
+
+    text-align: center;
+
+    font-size: 2rem;
+    color: #38bdf8;
+
+    background: #07111f;
+    border-radius: 8px;
+}
+
+.calculadora {
+    margin-top: 30px;
+    padding: 30px;
+
+    background: #07111f;
+    border: 1px solid #1e334d;
+
+    border-radius: 15px;
+}
+
+.calculadora h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.calculadora p {
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.calculadora label {
+    display: inline-block;
+    margin-right: 20px;
+    color: #cbd5e1;
+}
+
+.calculadora input {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 20px;
+
+    padding: 12px;
+
+    background: #10233a;
+    border: 1px solid #334155;
+
+    color: white;
+    border-radius: 7px;
+}
+
+.calculo {
+    margin-top: 25px;
+    color: #22c55e;
+    font-size: 1.4rem;
+}
+
+.comparacao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.senha-fraca,
+.senha-forte {
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.senha-fraca {
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid #7f1d1d;
+}
+
+.senha-forte {
+    background: rgba(34, 197, 94, 0.08);
+    border: 1px solid #166534;
+}
+
+.senha-fraca h3 {
+    color: #ef4444;
+}
+
+.senha-forte h3 {
+    color: #22c55e;
+}
+
+.exemplo {
+    margin: 20px 0;
+    padding: 15px;
+
+    background: #07111f;
+
+    border-radius: 8px;
+
+    font-family: monospace;
+}
+
+.comparacao li {
+    color: #94a3b8;
+    margin-bottom: 8px;
+}
+
+.sobre {
+    text-align: center;
+}
+
+.aluno {
+    max-width: 500px;
+    margin: 50px auto 0;
+
+    padding: 30px;
+
+    background: #10233a;
+    border: 1px solid #1e334d;
+
+    border-radius: 15px;
+}
+
+.aluno h3 {
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+footer {
+    padding: 40px 20px;
+    text-align: center;
+
+    color: #94a3b8;
+
+    border-top: 1px solid #1e334d;
+}
+
+footer p + p {
+    margin-top: 10px;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 750px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav div {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .inicio {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cadeado {
+        width: 180px;
+        height: 180px;
+        font-size: 70px;
+    }
+
+    .secao h2 {
+        font-size: 2.2rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .comparacao {
+        grid-template-columns: 1fr;
+    }
+
+    .calculadora label {
+        display: block;
+    }
+}
 
